@@ -1,0 +1,35 @@
+.bus-line-container {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add box-shadow to the transition */
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.bus-line-container:hover {
+  background-color: #e0e0e0; /* Lighter background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly larger box-shadow on hover */
+}
+
+.bus-line-number {
+  font-weight: bold;
+  font-size: xx-large;
+  border: 2px solid #2d2d2d;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.bus-line-number:hover {
+  background-color: #e0e0e0; /* Lighter background on hover */
+  cursor: pointer;
+}
+
+.lineNumber {
+  margin: 20px;
+}
