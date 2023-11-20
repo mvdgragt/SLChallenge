@@ -25,10 +25,7 @@ const getTop10BusLines = async () => {
         const top10Lines = getTopLinesSortedByStops(stopsCountPerLine);
 
     //    console.log(top10Lines);
-        return {
-            top10Lines,
-            stopsCountPerLine
-        };
+        return top10Lines;
     } catch (err) {
         console.error(err.message);
         throw error; // Re-throw the error so it can be caught in the calling function

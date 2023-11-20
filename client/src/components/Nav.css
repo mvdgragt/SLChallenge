@@ -4,6 +4,10 @@ body {
   }
 
   .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
     background-color: #2870f0;
     overflow: hidden;
     color: white;
@@ -22,4 +26,7 @@ body {
     .navbar-right {
       float: none;
     }
+  }
+  img {
+    height: 50px;
   }

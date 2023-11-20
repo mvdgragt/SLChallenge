@@ -4,7 +4,8 @@ import './Nav.css'
 const Nav = () => {
   return (
     <nav className="navbar">
-        <h1 className="">top 10 busslinjerna</h1>
+        <img src="/sl.png" />
+        <h1>top 10 busslinjerna</h1>
     </nav>
   )
 };
