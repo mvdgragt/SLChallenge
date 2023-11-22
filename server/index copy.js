@@ -21,10 +21,11 @@ app.get('/api/buslinjer', async (req, res) => {
 const getTop10BusLines = async () => {
     try {
         const busLinesData = await fetchBusLinesData();
+        const busStopsData = await fetchBusStopsData();
         const stopsCountPerLine = countStopsPerLine(busLinesData);
         const top10Lines = getTopLinesSortedByStops(stopsCountPerLine);
 
-    //    console.log(top10Lines);
+        console.log(top10Lines);
         return top10Lines;
     } catch (err) {
         console.error(err.message);
@@ -35,13 +36,21 @@ const getTop10BusLines = async () => {
 const fetchBusLinesData = async () => {
     try {
         const response = await axios.get(`https://api.sl.se/api2/LineData.json?model=jour&key=${API_KEY}&DefaultTransportModeCode=BUS`);
-        console.log(response.data.ResponseData.Result[0]);
+     //    console.log(response.data.ResponseData.Result[0]);
         return response.data.ResponseData.Result;
     } catch (err) { 
         console.error(err.message);
-    }
-   
-    
+    }   
+};
+
+const fetchBusStopsData = async () => {
+    try {
+        const response = await axios.get(`https://api.sl.se/api2/LineData.json?model=stop&key=${API_KEY}&DefaultTransportModeCode=BUS`);
+    //     console.log(response.data.ResponseData.Result[0]);
+        return response.data.ResponseData.Result;
+    } catch (err) { 
+        console.error(err.message);
+    }   
 };
 
 const countStopsPerLine = (busLinesData) => {
@@ -72,7 +81,6 @@ const getTopLinesSortedByStops = (stopsCountPerLine) => {
     } catch (err) {
        console.error(err.message); 
     }
-  
 };
 
 const port = process.env.PORT || 5000;

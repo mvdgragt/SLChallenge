@@ -10,6 +10,7 @@ const Linjer = ({ onLineNumberClick }) => {
         const res = await fetch('http://localhost:5000/api/buslinjer');
         const data = await res.json();
         setBusLines(data);
+        console.log(data);
        } catch (error) {
         console.error(error.message);
       }
@@ -24,7 +25,7 @@ const Linjer = ({ onLineNumberClick }) => {
         <span
           key={index}
           className="bus-line-number"
-          onClick={() => onLineNumberClick(line.lineNumber, line.stops)}
+          onClick={() => onLineNumberClick(line.lineNumber, line.stops, line.stopPointNames)}
         >
           {line.lineNumber}
         </span>
