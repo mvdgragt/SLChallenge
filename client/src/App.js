@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 import Nav from './components/Nav';
 import Linjer from './components/Linjer';
