@@ -10,7 +10,7 @@ const Hallplatser = ({ clickedLineNumber, stopPointNames }) => {
         {clickedLineNumber ? (
           <h3 className="HeaderTitle">Linje {clickedLineNumber} har {stopPointNamesLength} olika hållplatser</h3>
         ) : (
-          <h3 className="HeaderTitle">Hallplatser</h3>
+          <h3 className="HeaderTitle"></h3>
         )}
       </header>
 
@@ -24,8 +24,8 @@ const Hallplatser = ({ clickedLineNumber, stopPointNames }) => {
           ))}
         </div>
       ) : (
-        <h1>Hållplatserna kommer här...</h1>
-      )}
+        <img className="loadingImage" src="./bus.gif" alt="Loading..." />
+      ) }
     </div>
   );
 };

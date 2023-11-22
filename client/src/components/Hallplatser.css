@@ -16,11 +16,13 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 0px;
+    margin-left: 20px;
 }
 
 .column {
     position: relative;
     /* text-align: center; */ /* Remove this line */
+    
 }
 
 .vertical-line {
@@ -38,4 +40,10 @@ p {
     font-size: small;
     padding-left: 10px;
     margin: 5px;
+}
+
+.loadingImage {
+    display: block;
+    margin: auto;
+    height: 500px;
 }

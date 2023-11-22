@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding: 0 25px 0 25px;
     background-color: #2870f0;
     overflow: hidden;
     color: white;
@@ -16,7 +16,8 @@ body {
     
   }
 
-  @media screen and (max-width: 600px) {
+/*  @media screen and (max-width: 600px) {
+  */
     .navbar a, .navbar-right {
       float: none;
       display: block;
@@ -26,7 +27,8 @@ body {
     .navbar-right {
       float: none;
     }
-  }
+ /* }
+ */
   img {
     height: 50px;
   }
