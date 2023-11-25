@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import Linjer from './components/Linjer';
 import Hallplatser from './components/Hallplatser';
-import './app.css'
 
 interface AppProps {}
 

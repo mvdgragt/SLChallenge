@@ -18,7 +18,7 @@ const Linjer: React.FC<LinjerProps> = ({ onLineNumberClick }) => {
   useEffect(() => {
     const getBuslinjer = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api');
+        const res = await fetch('https://localhost:5000/api');
         const data = await res.json();
         setBusLines(data);
         console.log(data);

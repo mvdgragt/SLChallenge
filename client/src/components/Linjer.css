@@ -34,7 +34,8 @@
   .bus-line-number {
     font-size: large;
     padding: 5px;
-    margin: 5px;
+    display: block;
+    margin: 0 20 5 20;
   }
 
   .lineNumber {
