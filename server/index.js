@@ -4,7 +4,7 @@ const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = YOUR_API_KEY;
 
 app.use(cors());
 
