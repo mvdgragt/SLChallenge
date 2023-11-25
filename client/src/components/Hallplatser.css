@@ -19,6 +19,13 @@
     margin-left: 20px;
 }
 
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 900px) {
+    .columns-container {
+      grid-template-columns: repeat(4, 1fr); /* Set 4 columns for smaller screens */
+    }
+  }
+
 .column {
     position: relative;
     /* text-align: center; */ /* Remove this line */
@@ -47,3 +54,11 @@ p {
     margin: auto;
     height: 500px;
 }
+
+@media screen and (max-width: 900px) {
+    .loadingImage {
+        display: block;
+        margin: auto;
+        height: 250px;
+    }
+}    

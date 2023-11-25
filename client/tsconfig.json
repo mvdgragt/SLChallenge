@@ -8,7 +8,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": "./"
     // Additional options you may consider:
     // "moduleResolution": "node",
     // "baseUrl": "./src", // Adjust the base URL as per your project structure
