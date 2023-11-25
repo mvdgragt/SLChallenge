@@ -1,25 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import './Linjer.css';
 
-const Linjer = ({ onLineNumberClick }) => {
-  const [busLines, setBusLines] = useState([]);
-  const [selectedLine, setSelectedLine] = useState(null);
+interface LinjerProps {
+  onLineNumberClick: (lineNumber: string, stops: number, stopPointNames: string[]) => void;
+}
+
+interface BusLine {
+  lineNumber: string;
+  stops: number;
+  stopPointNames: string[];
+}
+
+const Linjer: React.FC<LinjerProps> = ({ onLineNumberClick }) => {
+  const [busLines, setBusLines] = useState<BusLine[]>([]);
+  const [selectedLine, setSelectedLine] = useState<string | null>(null);
 
   useEffect(() => {
     const getBuslinjer = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/buslinjer');
+        const res = await fetch('http://localhost:5000/api');
         const data = await res.json();
         setBusLines(data);
         console.log(data);
-      } catch (error) {
+      } catch (error: any) {
         console.error(error.message);
       }
     };
     getBuslinjer();
   }, []);
 
-  const handleLineClick = (lineNumber, stops, stopPointNames) => {
+  const handleLineClick = (lineNumber: string, stops: number, stopPointNames: string[]) => {
     onLineNumberClick(lineNumber, stops, stopPointNames);
     setSelectedLine(lineNumber);
   };

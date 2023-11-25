@@ -1,7 +1,12 @@
 import React from 'react';
 import './Hallplatser.css';
 
-const Hallplatser = ({ clickedLineNumber, stopPointNames }) => {
+interface HallplatserProps {
+  clickedLineNumber: string | null;
+  stopPointNames: string[] | null;
+}
+
+const Hallplatser: React.FC<HallplatserProps> = ({ clickedLineNumber, stopPointNames }) => {
   const stopPointNamesLength = stopPointNames ? stopPointNames.length : 0;
 
   return (
@@ -16,7 +21,7 @@ const Hallplatser = ({ clickedLineNumber, stopPointNames }) => {
 
       {clickedLineNumber ? (
         <div className="columns-container">
-          {stopPointNames.map((stopPointName, index) => (
+          {stopPointNames?.map((stopPointName, index) => (
             <div key={index} className="column">
               <div className="vertical-line"></div>
               <p>{stopPointName}</p>
@@ -25,7 +30,7 @@ const Hallplatser = ({ clickedLineNumber, stopPointNames }) => {
         </div>
       ) : (
         <img className="loadingImage" src="./bus.gif" alt="Loading..." />
-      ) }
+      )}
     </div>
   );
 };
