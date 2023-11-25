@@ -8,7 +8,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 app.use(cors());
 
-app.get('/api/buslinjer', async (req, res) => {
+app.get('/api', async (req, res) => {
     try {
         const top10Lines = await getTop10BusLines();
         res.json(top10Lines);
