@@ -12,10 +12,10 @@ const Hallplatser: React.FC<HallplatserProps> = ({ clickedLineNumber, stopPointN
   return (
     <div>
       <header className="headerBar">
-        {clickedLineNumber ? (
-          <h3 className="HeaderTitle">Linje {clickedLineNumber} har {stopPointNamesLength} olika hållplatser</h3>
-        ) : (
-          <h3 className="HeaderTitle"></h3>
+        {clickedLineNumber && (
+          <h3 className="HeaderTitle">
+            Linje {clickedLineNumber} har {stopPointNamesLength} olika hållplatser
+          </h3>
         )}
       </header>
 
