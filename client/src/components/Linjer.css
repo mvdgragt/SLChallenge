@@ -6,6 +6,15 @@
   padding: 2px 5px;
   border-radius: 4px;
   margin: 10px;
+  cursor: pointer; /* Add this line to set cursor to pointer by default */
+}
+
+.bus-line-number.selected {
+  background-color: #c0c0c0; /* Add a background color for the selected class */
+}
+
+.bus-line-number:hover {
+  background-color: #c0c0c0; /* Add a background color for hover effect */
 }
 
 .lineNumber {
