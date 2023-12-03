@@ -69,3 +69,11 @@ Från rotkatalogen:
 2. Gå till servermappen och kör: `npm run server`
 
 Besök [http://localhost:3000/api](http://localhost:3000/api) i din webbläsare för att se applikationen.
+
+## Testning
+
+För testning används [Jest](https://jestjs.io/) och [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). Jest fungerar som testkörare och React Testing Library är ett testbibliotek byggt för React som använder Jest som sin testkörare.
+
+För att köra tester i frontend, navigera till klientmappen och kör följande kommando, vilket startar Jest i bevakningsläge:
+```bash
+npm test
