@@ -1,42 +1,26 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "checkJs": true,
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "skipLibCheck": true,
-    "rootDir": "./"
-    // Additional options you may consider:
-    // "moduleResolution": "node",
-    // "baseUrl": "./src", // Adjust the base URL as per your project structure
-    // "paths": {
-    //   "@/*": ["src/*"]
-    // },
-    // "outDir": "./dist", // Specify the output directory for all emitted files
-    // "declaration": true,
-    // "sourceMap": true,
-    // "removeComments": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "strictNullChecks": true,
-    // "noImplicitAny": true,
-    // "strictPropertyInitialization": true,
-    // "noImplicitThis": true,
-    // "useUnknownInCatchVariables": true,
-    // "alwaysStrict": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noImplicitReturns": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noUncheckedIndexedAccess": true,
-    // "noImplicitOverride": true,
-    // "noPropertyAccessFromIndexSignature": true,
-    // "allowUnusedLabels": true,
-    // "allowUnreachableCode": true,
-    // "skipLibCheck": true
-  }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }

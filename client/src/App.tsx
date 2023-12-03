@@ -3,12 +3,10 @@ import Nav from './components/Nav';
 import Linjer from './components/Linjer';
 import Hallplatser from './components/Hallplatser';
 
-interface AppProps {}
-
-function App(props: AppProps) {
+function App() {
   const [clickedLineNumber, setClickedLineNumber] = useState<string | null>(null);
   const [stopPointNames, setStopPointNames] = useState<string[] | null>(null);
-
+  
   const handleLineNumberClick = (lineNumber: string, stops: number, stopPointNames: string[]) => {
     setClickedLineNumber(lineNumber);
     setStopPointNames(stopPointNames);
