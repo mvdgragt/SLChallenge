@@ -22,27 +22,33 @@
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 900px) {
     .columns-container {
-      grid-template-columns: repeat(4, 1fr); /* Set 4 columns for smaller screens */
+        grid-template-columns: repeat(4, 1fr);
+        /* Set 4 columns for smaller screens */
     }
-  }
+}
 
 .column {
     position: relative;
-    /* text-align: center; */ /* Remove this line */
-    
+    /* text-align: center; */
+    /* Remove this line */
+
 }
 
 .vertical-line {
     position: absolute;
     height: 100%;
-    width: 2px; /* Adjust the width as needed */
-    background-color: black; /* Adjust the color as needed */
+    width: 2px;
+    /* Adjust the width as needed */
+    background-color: black;
+    /* Adjust the color as needed */
     left: 0;
 }
+
 h1 {
     text-align: center;
 
 }
+
 p {
     font-size: small;
     padding-left: 10px;
@@ -61,4 +67,4 @@ p {
         margin: auto;
         height: 250px;
     }
-}    
+}

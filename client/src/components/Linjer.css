@@ -1,61 +1,61 @@
 /* Common styles for all screen sizes */
 .bus-line-number {
-    font-weight: bold;
-    font-size: xx-large;
-    border: 2px solid #2d2d2d;
-    padding: 2px 5px;
-    border-radius: 4px;
-    margin: 10px;
-    cursor: pointer; /* Add this line to set cursor to pointer by default */
+  font-weight: bold;
+  font-size: xx-large;
+  border: 2px solid #2d2d2d;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.bus-line-number.selected {
+  background-color: #c0c0c0;
+}
+
+.bus-line-number:hover {
+  background-color: #c0c0c0;
+}
+
+.lineNumber {
+  text-align: center;
+  font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  background-color: rgb(255, 255, 255);
+  margin: 0 0 30px 0;
+}
+
+.bus-line-container {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* Styles for screens with a width of 900px or less */
+@media (max-width: 900px) {
+  .bus-line-number {
+    font-size: large;
+    padding: 5px;
+    display: block;
+    margin: 0 20 5 20;
   }
-  
-  .bus-line-number.selected {
-    background-color: #c0c0c0; /* Add a background color for the selected class */
-  }
-  
-  .bus-line-number:hover {
-    background-color: #c0c0c0; /* Add a background color for hover effect */
-  }
-  
+
   .lineNumber {
-    text-align: center;
-    font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
-    font-size: x-large;
-    background-color: rgb(255, 255, 255);
-    margin: 0 0 30px 0;
+    font-size: large;
+    margin: 0 0 15px 0;
   }
-  
+
   .bus-line-container {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    height: 80px;
-    overflow: hidden;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    padding: 5px;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: 5px;
   }
-  
-  /* Styles for screens with a width of 900px or less */
-  @media (max-width: 900px) {
-    .bus-line-number {
-      font-size: large;
-      padding: 5px;
-      display: block;
-      margin: 0 20 5 20;
-    }
-  
-    .lineNumber {
-      font-size: large;
-      margin: 0 0 15px 0;
-    }
-  
-    .bus-line-container {
-      padding: 5px;
-      height: auto;
-      margin-bottom: 5px;
-      margin-left: 5px;
-    }
-  }
+}
